@@ -1,0 +1,21 @@
+{
+  "name": "neu-synth",
+  "description": "Synth for neume.js",
+  "version": "0.0.0",
+  "author": "Nao Yonamine <mohayonao@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/mohayonao/neu-synth/issues"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "lib"
+  ],
+  "keywords": [],
+  "licenses": "MIT",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohayonao/neu-synth.git"
+  }
+}
