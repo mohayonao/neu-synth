@@ -30,5 +30,15 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/mohayonao/neu-synth.git"
+  },
+  "scripts": {
+    "build": "npm run build-to5 && npm run build-browser && npm run build-minify",
+    "build-browser": "browserify ./browser.js --standalone NeuSynth --outfile build/neu-synth.js",
+    "build-minify": "uglifyjs build/neu-synth.js -m -r self -o build/ciseaux.min.js",
+    "build-to5": "babel src --out-dir lib",
+    "cover": "babel-node node_modules/.bin/isparta cover --report text --report html --report lcov node_modules/.bin/_mocha",
+    "lint": "jshint src test --reporter node_modules/jshint-stylish/stylish.js",
+    "test": "mocha --require espower-babel/guess",
+    "travis": "npm run lint && npm run test"
   }
 }
